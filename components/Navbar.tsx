@@ -4,13 +4,16 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NAV_ITEMS: NavItem[] = [
-  { label: 'Destinations', href: '#' },
-  { label: 'Experiences', href: '#' },
-  { label: 'Journal', href: '#' },
-  { label: 'Contact', href: '#' },
+  { label: 'Home', href: '#' },
+  { label: 'About Us', href: '#' },
+  { label: 'Itinerary', href: '#' },
 ];
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onNavigate?: (view: string) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -22,6 +25,18 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (label: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    
+    if (onNavigate) {
+      if (label === 'Home') onNavigate('home');
+      if (label === 'About Us') onNavigate('about');
+      if (label === 'Itinerary') onNavigate('experience');
+      if (label === 'Contact') onNavigate('contact');
+    }
+  };
+
   return (
     <>
       <motion.nav
@@ -30,14 +45,14 @@ const Navbar: React.FC = () => {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           scrolled 
-            ? 'bg-stone-900/40 backdrop-blur-md py-4 border-b border-white/5' 
+            ? 'bg-stone-900/80 backdrop-blur-md py-4 border-b border-white/5' 
             : 'bg-transparent py-8'
         }`}
       >
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
           
           {/* Logo - Serif & Elegant */}
-          <a href="#" className="relative z-50 group">
+          <a href="#" onClick={(e) => handleNavClick('Home', e)} className="relative z-50 group">
             <span className="text-2xl md:text-3xl font-serif text-white tracking-tight leading-none group-hover:opacity-80 transition-opacity">
               Roots&Routes
             </span>
@@ -49,6 +64,7 @@ const Navbar: React.FC = () => {
               <a
                 key={item.label}
                 href={item.href}
+                onClick={(e) => handleNavClick(item.label, e)}
                 className="text-[11px] uppercase tracking-[0.25em] font-medium text-white/80 hover:text-white transition-colors relative group py-2"
               >
                 {item.label}
@@ -58,9 +74,10 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Right Actions - Minimalist Button */}
+          {/* Right Actions - Contact Button */}
           <div className="hidden md:flex items-center space-x-8">
             <motion.button 
+              onClick={(e) => handleNavClick('Contact', e as any)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`
@@ -71,7 +88,7 @@ const Navbar: React.FC = () => {
                 }
               `}
             >
-              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold">Enquire</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold">Contact</span>
               <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </motion.button>
           </div>
@@ -103,16 +120,29 @@ const Navbar: React.FC = () => {
                 <motion.a
                   key={item.label}
                   href={item.href}
+                  onClick={(e) => handleNavClick(item.label, e)}
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + i * 0.1, duration: 0.8 }}
                   className="text-4xl md:text-5xl font-serif text-white/90 hover:text-white transition-colors tracking-tight"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   <span className="italic font-light text-white/40 mr-4 text-2xl">0{i + 1}</span>
                   {item.label}
                 </motion.a>
               ))}
+              
+              {/* Manual Contact Link for Mobile */}
+              <motion.a
+                  href="#"
+                  onClick={(e) => handleNavClick('Contact', e)}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 + NAV_ITEMS.length * 0.1, duration: 0.8 }}
+                  className="text-4xl md:text-5xl font-serif text-white/90 hover:text-white transition-colors tracking-tight"
+                >
+                  <span className="italic font-light text-white/40 mr-4 text-2xl">0{NAV_ITEMS.length + 1}</span>
+                  Contact
+              </motion.a>
             </div>
 
             <motion.div 

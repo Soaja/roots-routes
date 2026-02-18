@@ -5,10 +5,10 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 interface ExperiencePageProps {
-  onBack: () => void;
+  onNavigate: (view: string) => void;
 }
 
-const ExperiencePage: React.FC<ExperiencePageProps> = ({ onBack }) => {
+const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
   const { scrollY } = useScroll();
   const heroScale = useTransform(scrollY, [0, 1000], [1, 1.1]);
   const heroOpacity = useTransform(scrollY, [0, 500], [1, 0.5]);
@@ -52,7 +52,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onBack }) => {
 
   return (
     <div className="bg-[#FDFBF7] min-h-screen text-stone-800 font-sans selection:bg-stone-900 selection:text-white">
-      <Navbar />
+      <Navbar onNavigate={onNavigate} />
       
       {/* 1. CINEMATIC HERO SECTION */}
       <header className="relative h-screen w-full overflow-hidden">
@@ -72,7 +72,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onBack }) => {
         {/* Back Button */}
         <div className="absolute top-28 left-6 md:left-12 z-50">
             <button 
-                onClick={onBack}
+                onClick={() => onNavigate('home')}
                 className="group flex items-center gap-3 text-white/90 hover:text-white transition-colors uppercase tracking-[0.2em] text-[10px] font-medium"
             >
                 <div className="p-2 rounded-full border border-white/20 group-hover:bg-white group-hover:text-stone-900 transition-all duration-300">
