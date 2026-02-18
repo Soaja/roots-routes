@@ -2,7 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Instagram, Twitter, Facebook } from 'lucide-react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (view: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const handleNavClick = (view: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate(view);
+    }
+  };
+
   return (
     <footer className="relative w-full min-h-screen flex flex-col justify-between bg-stone-900 overflow-hidden text-white">
         {/* Background Image with Cinematic Overlay */}
@@ -47,6 +58,7 @@ const Footer: React.FC = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ delay: 0.3, duration: 0.4 }}
+                    onClick={(e) => handleNavClick('experience', e)}
                     className="bg-white text-stone-900 pl-8 pr-2 py-2 rounded-full font-medium text-lg flex items-center gap-4 mx-auto group hover:bg-stone-100 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
                 >
                     Show More
@@ -71,10 +83,10 @@ const Footer: React.FC = () => {
                 <div className="md:col-span-2">
                     <h4 className="text-white font-medium mb-6">Navigation</h4>
                     <ul className="space-y-4 text-stone-400 font-light text-sm">
-                        <li><a href="#" className="hover:text-white transition-colors duration-300 block hover:translate-x-1">Home</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors duration-300 block hover:translate-x-1">Experiences</a></li>
+                        <li><a href="#" onClick={(e) => handleNavClick('home', e)} className="hover:text-white transition-colors duration-300 block hover:translate-x-1">Home</a></li>
+                        <li><a href="#" onClick={(e) => handleNavClick('experience', e)} className="hover:text-white transition-colors duration-300 block hover:translate-x-1">Experiences</a></li>
                         <li><a href="#" className="hover:text-white transition-colors duration-300 block hover:translate-x-1">Journal</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors duration-300 block hover:translate-x-1">Contact Us</a></li>
+                        <li><a href="#" onClick={(e) => handleNavClick('contact', e)} className="hover:text-white transition-colors duration-300 block hover:translate-x-1">Contact Us</a></li>
                     </ul>
                 </div>
 

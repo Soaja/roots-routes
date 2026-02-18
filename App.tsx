@@ -43,7 +43,7 @@ const App: React.FC = () => {
         <Destinations />
         <FeaturedExperience onNavigate={() => navigateTo('experience')} />
       </main>
-      <Footer />
+      <Footer onNavigate={navigateTo} />
     </div>
   );
 };

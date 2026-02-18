@@ -210,7 +210,7 @@ const AboutUsPage: React.FC<AboutUsPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      <Footer />
+      <Footer onNavigate={onNavigate} />
     </div>
   );
 };

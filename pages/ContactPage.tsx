@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { ArrowRight, Mail, MapPin, Phone, MessageSquare, Instagram, Twitter, Facebook } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, Phone, MessageSquare, Instagram, Twitter, Facebook, Sparkles } from 'lucide-react';
 
 interface ContactPageProps {
   onNavigate: (view: string) => void;
@@ -189,11 +189,32 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                         </motion.div>
                     )}
                 </motion.div>
+
+                {/* Custom Itinerary Note */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
+                    className="mt-6 p-6 md:p-8 border border-white/5 bg-stone-800/20 backdrop-blur-sm rounded-sm"
+                >
+                    <div className="flex items-start gap-5">
+                        <div className="p-3 bg-stone-800 rounded-full text-stone-300 shrink-0">
+                            <Sparkles size={20} strokeWidth={1.5} />
+                        </div>
+                        <div>
+                            <h4 className="text-white font-serif text-xl mb-2">Want a different itinerary?</h4>
+                            <p className="text-stone-400 text-sm font-light leading-relaxed">
+                                Looking for something truly unique? We specialize in bespoke travel. 
+                                Simply write your specific requests and dream destinations in the form above, and we will craft a custom itinerary just for you.
+                            </p>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </div>
       </div>
 
-      <Footer />
+      <Footer onNavigate={onNavigate} />
     </div>
   );
 };

@@ -14,12 +14,12 @@ interface Destination {
 
 const destinations: Destination[] = [
   {
-    id: "palermo",
+    id: "agrigento",
     number: "01",
-    title: "Palermo",
+    title: "Agrigento",
     tag: "Capital of Culture",
-    description: "Wander through a golden haze of history. From Arab-Norman mosaics to the vibrant chaos of the Ballarò markets, Palermo is a sensory masterpiece waiting to be explored.",
-    image: "https://images.unsplash.com/photo-1555992828-ca4dbe41d294?q=80&w=2832&auto=format&fit=crop", // Warm, golden street vibe
+    description: "From the white cliffs of the Scala dei Turchi to the noble halls of the TEMPLE VALLEY, Agrigento represents the pinnacle of our \"Sicily Premium\" promise. It is a place where every sunset over the ruins is a reminder that beauty is the only legacy that truly endures",
+    image: "https://images.unsplash.com/photo-1569376672886-f6d2d4669866?q=80&w=2832&auto=format&fit=crop", // Valley of the Temples
     colSpan: "md:col-span-2"
   },
   {
@@ -69,8 +69,8 @@ const Destinations: React.FC = () => {
               transition={{ delay: 0.1, duration: 0.8 }}
               className="text-5xl md:text-6xl lg:text-7xl font-serif text-stone-900 leading-[1.05]"
             >
-              Curated locations for the <br />
-              <span className="italic font-light text-stone-500">discerning traveler.</span>
+              Curated locations for <br />
+              the <span className="italic font-light text-stone-500">discerning traveler.</span>
             </motion.h2>
           </div>
 
@@ -115,7 +115,7 @@ const Destinations: React.FC = () => {
                  <span className="text-6xl font-serif text-white/20 font-light">{dest.number}</span>
               </div>
 
-              {/* Tag (Glassmorphism) */}
+              {/* Tag (Glassmorphism) - Top Left */}
               <div className="absolute top-8 left-8">
                 <div className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
                   <span className="text-white text-xs tracking-widest uppercase font-medium">

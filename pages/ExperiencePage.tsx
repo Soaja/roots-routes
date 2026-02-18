@@ -98,7 +98,8 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                         <span className="flex items-center gap-1 text-xs tracking-widest uppercase"><MapPin size={12} /> West Sicily</span>
                     </div>
                     <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-6 leading-[0.9] tracking-tight">
-                        Sicilian <br/> <span className="italic font-light opacity-90">Sunset Escape</span>
+                        Sicilian<br />
+                        <span className="italic font-light opacity-90 block md:inline">Sunset Escape</span>
                     </h1>
                   </div>
                   
@@ -134,12 +135,15 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
               <h2 className="text-3xl md:text-5xl font-serif mb-10 text-stone-900 leading-tight">
                 Immerse yourself in a land where <span className="italic text-stone-500">time stands still</span> and the sea tells ancient stories.
               </h2>
-              <div className="prose prose-stone prose-lg text-stone-600 font-light leading-relaxed">
+              <div className="prose prose-stone prose-lg text-stone-600 font-light leading-relaxed space-y-6">
                 <p>
-                  This isn't just a trip; it's a sensory awakening. From the moment you arrive in Trapani, the scent of sea salt and citrus surrounds you. We've curated an itinerary that balances exploration with profound relaxation.
+                  This isn't just a trip; it's a sensory awakening. From the noble elegance of Palermo to the sacred silence of Agrigento, we have curated a journey that balances historical depth with the pinnacle of modern comfort.
                 </p>
                 <p>
-                  You will sail the crystal-clear waters of the <strong>Zingaro Reserve</strong>, cycle across the butterfly-shaped island of <strong>Favignana</strong>, and witness the sun setting over the Marsala salt pans—a view that has captivated travelers for centuries.
+                  Sail from Trapani to the butterfly-shaped island of Favignana, visiting the ancient Tonnara and diving into the crystal-clear waters of the Egadi archipelago.
+                </p>
+                <p>
+                  Retreat to boutique organic estates for wine tastings and gourmet experiences that celebrate the authentic “Dolce far niente" of the Sicilian soul.
                 </p>
               </div>
             </section>
@@ -177,14 +181,41 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                </div>
               
               <div className="space-y-0">
-                <ItineraryItem day={1} title="Welcome to Sicily (Trapani)" description="Arrival in Trapani. After checking into our boutique accommodation, we freshen up and immediately head out for our first Sicilian dinner! Sicily is famous for good food, and we certainly won't be shy. Overnight in Trapani." />
-                <ItineraryItem day={2} title="Exploring the West Coast" description="We pick up our rental cars and head straight for the sea! Whether it's the wild beauty of Monte Cofano or the serene Macari beach, today is about salt on your skin. Evening amidst the lively nightlife of Trapani." />
-                <ItineraryItem day={3} title="Zingaro Reserve & San Vito" description="A highlight of the trip. We board a private boat to explore the Zingaro Reserve, one of the most pristine natural areas in Italy. Swim in turquoise coves accessible only by sea. Afternoon aperitivo at the Tonnara." />
-                <ItineraryItem day={4} title="Erice & Marsala Salt Pans" description="A slower morning, followed by a drive up the misty mountain to the medieval town of Erice. In the late afternoon, we chase the sunset at the Marsala Salt Pans—a photographer's dream." />
-                <ItineraryItem day={5} title="Ferry to Favignana" description="We leave the mainland for the Egadi archipelago. Upon arrival in Favignana, we rent bicycles to explore this butterfly-shaped island at a slow pace. Hidden calas await." />
-                <ItineraryItem day={6} title="Boat Day at Marettimo" description="A full day excursion to Marettimo, the wildest and most remote of the islands. We'll explore sea caves and dramatic coastlines that feel untouched by time." />
-                <ItineraryItem day={7} title="Levanzo or Leisure" description="A free day to revisit your favorite spot in Favignana or take a quick boat ride to the tiny, car-free island of Levanzo for a granita and a dip in the blue." />
-                <ItineraryItem day={8} title="Arrivederci" description="Morning ferry back to Trapani, transfer to the airport, and final farewells. You leave with a tan, full heart, and new friends." />
+                <ItineraryItem 
+                  day={1} 
+                  title="Welcome to Sicily (Palermo)" 
+                  description="Your journey begins in the heart of Sicilian grandeur. After a morning check-in , the afternoon is dedicated to a full immersion through the vibrant Mercato del Capo for an authentic street food experience. The evening unfolds with a refined welcome dinner at a Rooftop Terrace, overlooking the city's timeless skyline. followed by a moonlight stroll through the Baroque wonders of the city center." 
+                />
+                <ItineraryItem 
+                  day={2} 
+                  title="Aristocratic Echoes & Grand Stages" 
+                  description="A day dedicated to the soul of Palermo. Witness the golden mosaics of the Monreale Cathedral before explore the iconic Teatro Massimo and the historic City Center district. As evening falls, prepare for an exclusive Gala Dinner at Palazzo Asmundo, where you will dine amidst 18th-century frescoes and collections of rare majolica, facing the illuminated grandeur of the Cathedral.Surmounted by history, you will dance to the rhythm of a live Mediterranean music band." 
+                />
+                <ItineraryItem 
+                  day={3} 
+                  title="The Salt Routes & Trapani" 
+                  description="After a sweet start tasting the original sicilian cannolo in trapani, we journey toward the surreal landscapes of the Saline di Trapani & Paceco Nature Reserve. After checking into your central boutique accommodation, enjoy a local Launch experience featuring local specialties. While the Cantina Fina is a masterpiece of the Marsala territory, your itinerary highlights a specialized Wine Tasting experience integrated with your arrival in the Trapani area. The night comes alive with a Live Band, celebrating the Mediterranean spirit under the stars." 
+                />
+                <ItineraryItem 
+                  day={4} 
+                  title="Erice & Marsala Salt Pans" 
+                  description="The morning begins with the raw energy of the Trapani Fish Market, a sensory theater where the catch of the day meets the &quot;Local Way&quot; of Sicilian life. A slower morning, followed by a drive up the misty mountain to the medieval town of Erice. A private boat tour across the turquoise waters of Favignana, followed by a guided immersion into the Tonnara Florio—a journey through the 'tonnare' tradition that defined Mediterranean wealth. As the sun sets, we return to the mainland for a curated dinner at the hotel to recharge." 
+                />
+                <ItineraryItem 
+                  day={5} 
+                  title="Rural Heritage & Bio Tradition" 
+                  description="We transition to the province of Agrigento, the Capital of Culture passing through the magnificent setting of Cammarata, attend the exclusive Osdia Event. This is a celebration of &quot;Roots&quot;: a folkloric group performance accompanied by a dedicated catering of heritage products. After this deep dive into tradition, we move to Agrigento for a restful night." 
+                />
+                <ItineraryItem 
+                  day={6} 
+                  title="The Valley Of Immortality" 
+                  description="Awaken in the Capital of Culture. Explore the majestic Valley of the Temples , followed by a once-in-a-lifetime private lunch inside the Valley, within the lush Kolymbetra Garden. Enjoy a unique Gin tasting and dedicated catering amidst ancient ruins. We conclude the journey with a sea-view dinner at the Scala dei Turchi, witnessing the white cliffs turn gold at dusk." 
+                />
+                <ItineraryItem 
+                  day={7} 
+                  title="Arrivederci Sicily" 
+                  description="A final Sicilian breakfast at the hotel before your private transfer concludes the journey. You leave with the scent of salt and history, carrying the &quot;feeling&quot; of Sicily—where every route led to a deeper root. You leave with a tan, full heart, and new friends." 
+                />
               </div>
             </section>
 
@@ -477,7 +508,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
         </button>
       </div>
 
-      <Footer />
+      <Footer onNavigate={onNavigate} />
     </div>
   );
 };
