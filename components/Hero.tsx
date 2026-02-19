@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       {/* Background Image with Cinematic Overlay */}
       <div className="absolute inset-0 z-0 select-none">
         <img 
-          src="/images/hero1.webp" 
+          src="/images/111. HERO SECTION (1).jpg" 
           alt="Sicily Coastline Cefalu" 
           className="w-full h-full object-cover scale-105"
         />
