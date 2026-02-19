@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       {/* Background Image with Cinematic Overlay */}
       <div className="absolute inset-0 z-0 select-none">
         <img 
-          src="https://images.unsplash.com/photo-1548663806-258169134b41?q=80&w=2832&auto=format&fit=crop" 
+          src="/images/sicily-coast.jpg" 
           alt="Sicily Coastline Cefalu" 
           className="w-full h-full object-cover scale-105"
         />
