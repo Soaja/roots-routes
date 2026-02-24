@@ -19,7 +19,7 @@ const destinations: Destination[] = [
     title: "Agrigento",
     tag: "Capital of Culture",
     description: "From the white cliffs of the Scala dei Turchi to the noble halls of the TEMPLE VALLEY, Agrigento represents the pinnacle of our \"Sicily Premium\" promise. It is a place where every sunset over the ruins is a reminder that beauty is the only legacy that truly endures",
-    image: "images/agrigento1.webp", // Valley of the Temples
+    image: "images/agrigento3.webp", // Valley of the Temples
     colSpan: "md:col-span-2"
   },
   {
@@ -37,7 +37,7 @@ const destinations: Destination[] = [
     title: "Signature Coastal Adventures",
     tag: "Mediterranean Highlights",
     description: "Sail beyond the ordinary and explore Sicily’s most exclusive sea experiences.",
-    image: "images/boat2.webp", // Scenic vineyard with view
+    image: "images/boat1.webp", // Scenic vineyard with view
     colSpan: "md:col-span-3"
   }
 ];
