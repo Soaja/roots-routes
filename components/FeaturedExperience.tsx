@@ -29,21 +29,6 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
             </h2>
           </motion.div>
 
-          {/* Navigation Controls (Visual only for this single featured item, adds premium feel) */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="flex gap-4"
-          >
-            <button className="p-4 rounded-full border border-stone-200 hover:border-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300 group">
-              <ChevronLeft size={20} strokeWidth={1.5} />
-            </button>
-            <button className="p-4 rounded-full border border-stone-200 hover:border-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300 group">
-              <ChevronRight size={20} strokeWidth={1.5} />
-            </button>
-          </motion.div>
-        </div>
 
         {/* Main Content Card */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16 items-center">
@@ -57,7 +42,7 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
             className="relative w-full h-[500px] md:h-[650px] overflow-hidden rounded-sm group"
           >
             <img 
-              src="https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?q=80&w=2867&auto=format&fit=crop" 
+              src="images/coast1.webp" 
               alt="Manarola Coastline Sunset" 
               className="w-full h-full object-cover transition-transform duration-[2s] ease-in-out group-hover:scale-105"
             />
