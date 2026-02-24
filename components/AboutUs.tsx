@@ -87,7 +87,7 @@ const AboutUs: React.FC = () => {
       <motion.div style={{ y: yPolaroidLeft }} className="absolute top-0 left-0 w-full h-full pointer-events-none xl:pointer-events-auto">
         <Polaroid 
           variant="classic"
-          src="https://images.unsplash.com/photo-1596716075908-16cb60df38c5?q=80&w=1500&auto=format&fit=crop" // Vineyard
+          src="images/palermo1.webp" // Vineyard
           alt="Sicilian Vineyard"
           className="top-[15%] left-[-2%] xl:left-[5%] w-48 xl:w-64 -rotate-6 grayscale-[10%] hover:grayscale-0 transition-all duration-700 shadow-2xl z-10"
           delay={0.2}
