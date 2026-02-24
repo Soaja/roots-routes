@@ -94,7 +94,7 @@ const AboutUs: React.FC = () => {
         />
         <Polaroid 
           variant="classic"
-          src="images/sicilian_market2" // Pasta
+          src="images/sicilian_market2.webp" // Pasta
           alt="Authentic Pasta"
           className="bottom-[10%] left-[2%] xl:left-[8%] w-40 xl:w-56 rotate-3 grayscale-[10%] hover:grayscale-0 transition-all duration-700 shadow-xl"
           delay={0.4}
