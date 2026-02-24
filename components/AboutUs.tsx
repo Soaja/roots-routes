@@ -94,7 +94,7 @@ const AboutUs: React.FC = () => {
         />
         <Polaroid 
           variant="classic"
-          src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=1500&auto=format&fit=crop" // Pasta
+          src="images/sicilian_market2" // Pasta
           alt="Authentic Pasta"
           className="bottom-[10%] left-[2%] xl:left-[8%] w-40 xl:w-56 rotate-3 grayscale-[10%] hover:grayscale-0 transition-all duration-700 shadow-xl"
           delay={0.4}
@@ -112,7 +112,7 @@ const AboutUs: React.FC = () => {
         />
         <Polaroid 
           variant="classic"
-          src="https://images.unsplash.com/photo-1498522271744-cdd43b9545e8?q=80&w=1500&auto=format&fit=crop" // Street
+          src="images/sicilian_flavour1.webp" // Street
           alt="Taormina Streets"
           className="bottom-[15%] right-[5%] xl:right-[12%] w-44 xl:w-52 -rotate-3 grayscale-[10%] hover:grayscale-0 transition-all duration-700 shadow-xl"
           delay={0.5}
