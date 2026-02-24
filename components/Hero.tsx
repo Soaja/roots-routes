@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import Polaroid from './Polaroid';
 import Counter from './Counter';
 
 interface HeroProps {
@@ -23,47 +22,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* --- LEFT SIDE: THE ROOTS (Classic Polaroids) --- */}
-      {/* 1. Ancient Culture/History */}
-      <Polaroid 
-        variant="classic"
-        src="https://images.unsplash.com/photo-1555992828-ca4dbe41d294?q=80&w=1500&auto=format&fit=crop"
-        alt="Sicilian Streets"
-        className="top-[15%] left-[5%] w-56"
-        rotation={-8}
-        delay={0.4}
-      />
-      
-      {/* 2. Authentic People/Food */}
-      <Polaroid 
-        variant="classic"
-        src="https://images.unsplash.com/photo-1621253457805-a337580662d7?q=80&w=1500&auto=format&fit=crop"
-        alt="Sicilian Market Tradition"
-        className="bottom-[20%] left-[10%] w-60"
-        rotation={6}
-        delay={0.6}
-      />
-
-      {/* --- RIGHT SIDE: THE ROUTES/EXPERIENCE (Modern Cards) --- */}
-      {/* 1. Luxury/Relaxation */}
-      <Polaroid 
-        variant="modern"
-        src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1500&auto=format&fit=crop"
-        alt="Wine Tasting Experience"
-        className="top-[18%] right-[5%] w-64"
-        rotation={6}
-        delay={0.5}
-      />
-      
-      {/* 2. Adventure/Sea */}
-      <Polaroid 
-        variant="modern"
-        src="https://images.unsplash.com/photo-1467809623567-9366d0932a76?q=80&w=1500&auto=format&fit=crop"
-        alt="Private Boat Tour"
-        className="bottom-[18%] right-[12%] w-72"
-        rotation={-4}
-        delay={0.7}
-      />
 
       {/* Center Content */}
       <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center text-center h-full pt-10">
