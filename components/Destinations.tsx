@@ -19,7 +19,7 @@ const destinations: Destination[] = [
     title: "Agrigento",
     tag: "Capital of Culture",
     description: "From the white cliffs of the Scala dei Turchi to the noble halls of the TEMPLE VALLEY, Agrigento represents the pinnacle of our \"Sicily Premium\" promise. It is a place where every sunset over the ruins is a reminder that beauty is the only legacy that truly endures",
-    image: "https://images.unsplash.com/photo-1569376672886-f6d2d4669866?q=80&w=2832&auto=format&fit=crop", // Valley of the Temples
+    image: "images/agrigento1.webp", // Valley of the Temples
     colSpan: "md:col-span-2"
   },
   {
@@ -28,16 +28,16 @@ const destinations: Destination[] = [
     title: "Catania",
     tag: "The Black City",
     description: "Built from the very lava that once destroyed it. Discover Baroque elegance carved from dark volcanic stone at the foot of Mount Etna.",
-    image: "https://images.unsplash.com/photo-1616016149457-3c58b1a457c6?q=80&w=1500&auto=format&fit=crop", // Darker, dramatic contrast
+    image: "images/catania2.webp", // Darker, dramatic contrast
     colSpan: "md:col-span-1"
   },
   {
     id: "etna",
     number: "03",
-    title: "Etna Vineyards",
-    tag: "Volcanic Wine Tasting",
-    description: "Ascend the slopes of Europe's highest active volcano. Experience a private sommelier tour in ancient vineyards enriched by mineral-heavy soil, tasting wines that tell the story of fire and earth.",
-    image: "https://images.unsplash.com/photo-1559563362-c667ba5f5480?q=80&w=2832&auto=format&fit=crop", // Scenic vineyard with view
+    title: "Signature Coastal Adventures",
+    tag: "Mediterranean Highlights",
+    description: "Sail beyond the ordinary and explore Sicily’s most exclusive sea experiences.",
+    image: "images/boat2.webp", // Scenic vineyard with view
     colSpan: "md:col-span-3"
   }
 ];
