@@ -1,16 +1,29 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Calendar, Users, MapPin, Sun, BarChart3, ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Calendar, Users, MapPin, Sun, BarChart3, ArrowRight } from "lucide-react";
 
 interface FeaturedExperienceProps {
   onNavigate?: () => void;
 }
 
+type SpecItemProps = {
+  icon: React.ElementType;
+  label: string;
+};
+
+const SpecItem = ({ icon: Icon, label }: SpecItemProps) => (
+  <div className="flex items-center gap-3 text-stone-600">
+    <div className="p-2 bg-stone-50 rounded-full text-stone-900">
+      <Icon size={18} strokeWidth={1.5} />
+    </div>
+    <span className="text-sm font-medium tracking-wide">{label}</span>
+  </div>
+);
+
 const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) => {
   return (
     <section className="relative w-full py-32 md:py-40 bg-white overflow-hidden border-t border-stone-100">
       <div className="container mx-auto px-6 md:px-12">
-
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 gap-8">
           <motion.div
@@ -23,16 +36,16 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
             <span className="text-stone-400 font-sans text-xs tracking-[0.3em] uppercase font-medium block mb-4">
               Featured Experience
             </span>
+
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-900 leading-[1.1]">
               Book Your Sicily <br />
               <span className="italic text-stone-500">Premium Experience</span> Today.
             </h2>
           </motion.div>
-        </div> {/* ✅ missing closing div fixed */}
+        </div>
 
         {/* Main Content Card */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16 items-center">
-
           {/* Left: Image Area */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -43,7 +56,7 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
           >
             <img
               src="/images/coast1.webp"
-              alt="Manarola Coastline Sunset"
+              alt="Sicilian coast at sunset"
               className="w-full h-full object-cover transition-transform duration-[2s] ease-in-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
@@ -62,9 +75,11 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
               </h3>
 
               <p className="text-stone-500 text-base md:text-lg leading-relaxed mb-10 font-light border-l border-stone-200 pl-6">
-                Indulge in authentic local cuisine, explore ancient Greek temples, sail along the coastline, and uncover the rich history and flavors of Sicily. A curated journey for the senses.
+                Indulge in authentic local cuisine, explore ancient Greek temples, sail along the coastline,
+                and uncover the rich history and flavors of Sicily. A curated journey for the senses.
               </p>
 
+              {/* Tags / Specs Grid */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4 mb-12">
                 <SpecItem icon={Sun} label="7 Days" />
                 <SpecItem icon={Calendar} label="May - Oct" />
@@ -73,9 +88,12 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
                 <SpecItem icon={Users} label="Small Group" />
               </div>
 
+              {/* Price & CTA */}
               <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 border-t border-stone-100 pt-10">
                 <div>
-                  <span className="text-stone-400 text-xs tracking-widest uppercase mb-2 block">Starting Price</span>
+                  <span className="text-stone-400 text-xs tracking-widest uppercase mb-2 block">
+                    Starting Price
+                  </span>
                   <div className="text-4xl font-serif text-stone-900">€2,499</div>
                 </div>
 
@@ -96,14 +114,5 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
     </section>
   );
 };
-
-const SpecItem = ({ icon: Icon, label }: { icon: any; label: string }) => (
-  <div className="flex items-center gap-3 text-stone-600">
-    <div className="p-2 bg-stone-50 rounded-full text-stone-900">
-      <Icon size={18} strokeWidth={1.5} />
-    </div>
-    <span className="text-sm font-medium tracking-wide">{label}</span>
-  </div>
-);
 
 export default FeaturedExperience;
