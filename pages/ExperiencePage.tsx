@@ -61,7 +61,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
             className="absolute inset-0"
         >
           <img 
-            src="https://images.unsplash.com/photo-1548663806-258169134b41?q=80&w=2832&auto=format&fit=crop"
+            src="images/hero.webp"
             alt="Sicily Coast" 
             className="w-full h-full object-cover"
           />
