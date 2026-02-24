@@ -55,7 +55,7 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
             className="relative w-full h-[500px] md:h-[650px] overflow-hidden rounded-sm group"
           >
             <img
-              src="/images/coast1.webp"
+              src="/images/sicily_ancient_street2.webp"
               alt="Sicilian coast at sunset"
               className="w-full h-full object-cover transition-transform duration-[2s] ease-in-out group-hover:scale-105"
             />
