@@ -105,7 +105,7 @@ const AboutUs: React.FC = () => {
       <motion.div style={{ y: yPolaroidRight }} className="absolute top-0 left-0 w-full h-full pointer-events-none xl:pointer-events-auto">
          <Polaroid 
           variant="classic"
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1500&auto=format&fit=crop" // Dining
+          src="/images/catania1.webp" // Dining
           alt="Al Fresco Dining"
           className="top-[20%] right-[-2%] xl:right-[5%] w-52 xl:w-60 rotate-6 grayscale-[10%] hover:grayscale-0 transition-all duration-700 shadow-2xl z-10"
           delay={0.3}
