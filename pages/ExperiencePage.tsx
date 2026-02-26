@@ -118,7 +118,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                   <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[10px] tracking-widest uppercase">Local Flavors</div>
                 </div>
                 <div className="relative group overflow-hidden rounded-sm">
-                  <img src="images/favignana2.webp" alt="Favignana" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+                  <img src="images/teatro1.jpeg" alt="Favignana" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
                   <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[10px] tracking-widest uppercase">Crystal Waters</div>
                 </div>
                 <div className="relative group overflow-hidden rounded-sm">
