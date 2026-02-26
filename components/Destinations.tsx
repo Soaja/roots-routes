@@ -37,7 +37,7 @@ const destinations: Destination[] = [
     title: "Signature Coastal Adventures",
     tag: "Mediterranean Highlights",
     description: "Sail beyond the ordinary and explore Sicily’s most exclusive sea experiences.",
-    image: "images/favignana2.webp", // Scenic vineyard with view
+    image: "images/favignana3.webp", // Scenic vineyard with view
     colSpan: "md:col-span-3"
   }
 ];
