@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
 interface Destination {
   id: string;
@@ -23,12 +23,12 @@ const destinations: Destination[] = [
     colSpan: "md:col-span-2"
   },
   {
-    id: "catania",
+    id: "trapani",
     number: "02",
-    title: "Catania",
-    tag: "The Black City",
-    description: "Built from the very lava that once destroyed it. Discover Baroque elegance carved from dark volcanic stone at the foot of Mount Etna.",
-    image: "images/catania2.webp", // Darker, dramatic contrast
+    title: "Trapani",
+    tag: "Salt Flats & Sunsets",
+    description: "Where ancient salt traditions meet golden Mediterranean light. Trapani's crystalline salt marshes create a surreal landscape of geometric beauty and timeless craft.",
+    image: "images/catania2.webp",
     colSpan: "md:col-span-1"
   },
   {
@@ -144,12 +144,6 @@ const Destinations: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Circle Arrow Button (Bottom Right) */}
-                <div className="absolute bottom-8 right-8 pointer-events-auto">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/30 flex items-center justify-center bg-transparent hover:bg-white hover:text-stone-900 text-white transition-all duration-500 group-hover:scale-110">
-                    <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-500 group-hover:rotate-45" />
-                  </div>
-                </div>
               </div>
             </motion.div>
           ))}
