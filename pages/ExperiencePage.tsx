@@ -114,7 +114,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
               <span className="text-stone-400 font-sans text-xs tracking-[0.2em] uppercase font-bold block mb-8">Visual Journal</span>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[800px] md:h-[600px]">
                 <div className="md:col-span-1 md:row-span-2 relative group overflow-hidden rounded-sm">
-                  <img src="images/sicilian_vineyard3.webp" alt="Wine" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+                  <img src="images/vino1.jpeg" alt="Wine" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
                   <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[10px] tracking-widest uppercase">Local Flavors</div>
                 </div>
                 <div className="relative group overflow-hidden rounded-sm">
@@ -122,7 +122,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                   <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[10px] tracking-widest uppercase">Crystal Waters</div>
                 </div>
                 <div className="relative group overflow-hidden rounded-sm">
-                  <img src="images/palermo1" alt="Street" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+                  <img src="images/as1.jpeg" alt="Street" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
                   <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[10px] tracking-widest uppercase">Ancient Streets</div>
                 </div>
               </div>
