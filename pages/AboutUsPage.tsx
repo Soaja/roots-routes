@@ -14,7 +14,7 @@ const AboutUsPage: React.FC<AboutUsPageProps> = ({ onNavigate }) => {
       <section className="relative h-[90vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=3333&auto=format&fit=crop"
+            src="images/heroabt1.jpeg"
             alt="Cinque Terre Coast"
             className="w-full h-full object-cover opacity-90 scale-105 filter saturate-[.85] contrast-[1.1]"
           />
