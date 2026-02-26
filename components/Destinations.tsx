@@ -28,7 +28,7 @@ const destinations: Destination[] = [
     title: "Trapani",
     tag: "Salt Flats & Sunsets",
     description: "Where ancient salt traditions meet golden Mediterranean light. Trapani's crystalline salt marshes create a surreal landscape of geometric beauty and timeless craft.",
-    image: "images/catania2.webp",
+    image: "images/trapani1.jpeg",
     colSpan: "md:col-span-1"
   },
   {
