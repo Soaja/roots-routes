@@ -31,17 +31,13 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-5xl mx-auto flex flex-col items-center"
         >
-          <span className="text-xs md:text-sm font-sans font-medium tracking-[0.3em] text-stone-300 uppercase mb-6 border border-stone-400/30 px-4 py-1.5 rounded-full backdrop-blur-sm">
-            Est. 2024 &bull; Sicily
-          </span>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium leading-[1.1] text-white mb-8 tracking-tight drop-shadow-2xl">
-            <span className="italic block text-4xl md:text-6xl lg:text-7xl text-stone-200 mb-2 font-light">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] text-white mb-8 tracking-tight drop-shadow-2xl">
+            <span className="italic block text-3xl md:text-5xl lg:text-6xl text-stone-200 mb-2 font-light">
               Where heritage meets horizon
             </span>
             Roots & Routes
           </h1>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -63,17 +59,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             <ArrowRight className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
           </motion.button>
         </motion.div>
-
-        {/* Floating Stats - Minimalist Modern Style */}
-        <div className="absolute bottom-10 left-0 right-0 w-full px-6">
-          <div className="max-w-4xl mx-auto border-t border-white/10 pt-8 flex justify-between md:justify-center md:gap-32 items-center">
-            <Counter value="98%" label="Client Satisfaction" delay={1.2} />
-            <div className="hidden md:block w-px h-12 bg-white/10"></div>
-            <Counter value="45" label="Curated Experiences" delay={1.4} />
-            <div className="hidden md:block w-px h-12 bg-white/10"></div>
-            <Counter value="24/7" label="Concierge Support" delay={1.6} />
-          </div>
-        </div>
       </div>
     </section>
   );
