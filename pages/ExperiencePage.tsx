@@ -229,7 +229,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                   <div>
                     <span className="text-stone-400 text-[10px] tracking-widest uppercase font-bold">Total Price</span>
                     <div className="flex items-baseline gap-2 mt-1">
-                      <span className="text-4xl font-serif text-stone-900">€1,099</span>
+                      <span className="text-4xl font-serif text-stone-900">€4,000</span>
                       <span className="text-stone-400 font-light text-sm">/ person</span>
                     </div>
                   </div>
@@ -310,11 +310,11 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                   <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-3 mb-8 bg-stone-50 p-4 rounded-sm">
                     <div className="flex justify-between text-xs">
                       <span className="text-stone-500">Deposit required</span>
-                      <span className="font-medium text-stone-900">€100</span>
+                      <span className="font-medium text-stone-900">€1000</span>
                     </div>
                     <div className="flex justify-between text-xs">
                       <span className="text-stone-500">Balance due</span>
-                      <span className="font-medium text-stone-900">30 days before</span>
+                      <span className="font-medium text-stone-900">60 days before</span>
                     </div>
                   </motion.div>
                 )}
@@ -384,7 +384,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-6 flex flex-col gap-3">
                     <div className="flex items-center gap-3 text-xs text-stone-500">
                       <Check size={14} className="text-green-600" />
-                      <span>Free cancellation up to 31 days before</span>
+                      <span>Free cancellation up to 65 days before</span>
                     </div>
                     <div className="flex items-center gap-3 text-xs text-stone-500">
                       <Check size={14} className="text-green-600" />
@@ -397,25 +397,11 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                   </motion.div>
                 )}
               </motion.div>
-              {/* Coordinator */}
-              <div className="flex items-center gap-4 p-4 bg-white border border-stone-100 rounded-sm shadow-sm">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Coordinator" className="w-12 h-12 rounded-full object-cover border border-stone-200" />
-                <div>
-                  <span className="text-[10px] text-stone-400 uppercase tracking-wider block">Your Coordinator</span>
-                  <span className="text-sm font-serif font-medium text-stone-900">Giulia Romano</span>
-                </div>
-              </div>
               {/* Flight Widget */}
               <div className="p-6 bg-white border border-stone-100 rounded-sm shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <Plane size={18} className="text-stone-400" />
                   <span className="text-xs font-bold uppercase tracking-widest text-stone-500">Getting There</span>
-                </div>
-                <div className="mb-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <span className="text-xs text-stone-400 uppercase tracking-wide">In/Out</span>
-                    <span className="text-sm font-serif font-medium text-stone-900 text-right">Palermo (PMO)</span>
-                  </div>
                 </div>
                 <button className="w-full py-3 border border-stone-200 text-stone-600 text-xs tracking-[0.2em] uppercase font-bold hover:border-stone-900 hover:text-stone-900 transition-colors flex items-center justify-center gap-2 group">
                   Find Flights
@@ -430,7 +416,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
       <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-stone-200 p-4 z-40 flex justify-between items-center shadow-[0_-5px_20px_rgba(0,0,0,0.05)] safe-area-pb">
         <div>
           <span className="text-[10px] text-stone-500 block uppercase tracking-wide">Total Price</span>
-          <span className="text-xl font-serif text-stone-900 font-bold">€1,099</span>
+          <span className="text-xl font-serif text-stone-900 font-bold">€4,000/span>
         </div>
         <button className="px-6 py-3 bg-stone-900 text-white text-xs tracking-[0.2em] uppercase font-bold rounded-sm">
           Book Now
