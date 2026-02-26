@@ -35,7 +35,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
       {/* 1. CINEMATIC HERO SECTION */}
       <header className="relative h-screen w-full overflow-hidden">
         <motion.div style={{ scale: heroScale, opacity: heroOpacity }} className="absolute inset-0">
-          <img src="images/coast1.webp" alt="Sicily Coast" className="w-full h-full object-cover" />
+          <img src="images/iti1.jpeg" alt="Sicily Coast" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-stone-900/60" />
         </motion.div>
