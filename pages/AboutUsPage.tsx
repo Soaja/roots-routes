@@ -77,18 +77,11 @@ const AboutUsPage: React.FC<AboutUsPageProps> = ({ onNavigate }) => {
             >
               {/* Main Image */}
               <img
-                src="https://images.unsplash.com/photo-1533158307587-828f0a76ef93?q=80&w=1887&auto=format&fit=crop"
+                src="images/lemoni1.jpeg"
                 alt="Sicilian Details"
                 className="w-[85%] h-[85%] object-cover absolute top-0 right-0 shadow-2xl z-10"
               />
-              {/* Secondary Image (Behind) */}
-              <div className="absolute bottom-0 left-0 w-[60%] h-[60%] bg-stone-200 z-0 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1528114039593-4366cc08227d?q=80&w=1887&auto=format&fit=crop"
-                  alt="Texture"
-                  className="w-full h-full object-cover opacity-60 grayscale mix-blend-multiply"
-                />
-              </div>
+              
               {/* Decorative Stamp */}
               <div className="absolute bottom-10 right-10 z-20 w-24 h-24 bg-stone-900 rounded-full flex items-center justify-center text-white p-2 animate-[spin_10s_linear_infinite]">
                 <svg viewBox="0 0 100 100" className="w-full h-full fill-current">
