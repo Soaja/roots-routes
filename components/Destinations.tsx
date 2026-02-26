@@ -19,7 +19,7 @@ const destinations: Destination[] = [
     title: "Agrigento",
     tag: "Capital of Culture",
     description: "From the white cliffs of the Scala dei Turchi to the noble halls of the TEMPLE VALLEY, Agrigento represents the pinnacle of our \"Sicily Premium\" promise. It is a place where every sunset over the ruins is a reminder that beauty is the only legacy that truly endures",
-    image: "images/agrigento3.webp", // Valley of the Temples
+    image: "images/agri1.jpeg", // Valley of the Temples
     colSpan: "md:col-span-2"
   },
   {
