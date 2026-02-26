@@ -139,52 +139,6 @@ const AboutUsPage: React.FC<AboutUsPageProps> = ({ onNavigate }) => {
           </div>
         </div>
       </section>
-      {/* --- SECTION 4: THE TEAM (Curator Profile) --- */}
-      <section className="py-24 md:py-40 bg-[#FDFBF7] relative overflow-hidden">
-        {/* Background Graphic */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-stone-100 rounded-full blur-[100px] -translate-x-1/2 pointer-events-none"></div>
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="max-w-6xl mx-auto bg-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.05)] p-8 md:p-16 flex flex-col md:flex-row gap-12 md:gap-20 items-center">
-            {/* Image Side */}
-            <div className="w-full md:w-1/2">
-              <div className="relative aspect-[3/4] overflow-hidden group">
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop"
-                  alt="Giulia Romano Founder"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"
-                />
-                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2">
-                  <span className="block text-stone-900 font-serif text-lg">Giulia Romano</span>
-                  <span className="block text-stone-500 text-xs tracking-widest uppercase">Founder & Head Curator</span>
-                </div>
-              </div>
-            </div>
-            {/* Text Side */}
-            <div className="w-full md:w-1/2">
-              <span className="text-stone-400 font-sans text-xs tracking-[0.25em] uppercase font-bold block mb-6">Meet the Team</span>
-              <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-8">
-                "I wanted to show the world the Sicily I grew up in."
-              </h2>
-              <p className="text-stone-600 font-light text-lg leading-relaxed mb-8">
-                Born in Palermo and raised between the salt pans of Marsala and the streets of Rome, Giulia founded Roots&Routes to bridge the gap between luxury travel and authentic local living.
-              </p>
-              <p className="text-stone-600 font-light text-lg leading-relaxed mb-12">
-                With a background in Art History and a decade of experience in high-end hospitality, she personally vets every villa, vineyard, and vessel in our collection.
-              </p>
-              <div className="flex gap-8">
-                <div>
-                  <span className="block text-3xl font-serif text-stone-900">10+</span>
-                  <span className="text-xs text-stone-400 uppercase tracking-wider">Years Experience</span>
-                </div>
-                <div>
-                  <span className="block text-3xl font-serif text-stone-900">500+</span>
-                  <span className="text-xs text-stone-400 uppercase tracking-wider">Happy Travelers</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <Footer onNavigate={onNavigate} />
     </div>
   );
