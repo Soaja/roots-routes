@@ -83,8 +83,8 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
               <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4 mb-12">
                 <SpecItem icon={Sun} label="7 Days" />
                 <SpecItem icon={Calendar} label="May - Oct" />
-                <SpecItem icon={BarChart3} label="Moderate" />
-                <SpecItem icon={MapPin} label="Catania Airport" />
+                <SpecItem icon={BarChart3} label="Easy" />
+                <SpecItem icon={MapPin} label="Palermo" />
                 <SpecItem icon={Users} label="Small Group" />
               </div>
 
@@ -94,7 +94,7 @@ const FeaturedExperience: React.FC<FeaturedExperienceProps> = ({ onNavigate }) =
                   <span className="text-stone-400 text-xs tracking-widest uppercase mb-2 block">
                     Starting Price
                   </span>
-                  <div className="text-4xl font-serif text-stone-900">€2,499</div>
+                  <div className="text-4xl font-serif text-stone-900">€4,000</div>
                 </div>
 
                 <motion.button
