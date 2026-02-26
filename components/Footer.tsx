@@ -143,7 +143,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           className="whitespace-nowrap leading-[0.85] font-bold text-white text-center tracking-tighter select-none opacity-20 pointer-events-none mix-blend-overlay pb-2 md:pb-4 block"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: '15vw',
+            fontSize: '12vw',
             transformOrigin: 'center',
           }}
         >
