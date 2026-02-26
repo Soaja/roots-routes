@@ -12,7 +12,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
   const heroOpacity = useTransform(scrollY, [0, 500], [1, 0.5]);
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState<number>(15);
-  const tripDuration = 6; // 7 days, 6 nights
+  const tripDuration = 6;
   const [isRequestFormOpen, setIsRequestFormOpen] = useState(false);
   const daysInMonth = 30;
   const startDayOffset = 6;
@@ -160,7 +160,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                 <ItineraryItem
                   day={5}
                   title="Gibellina — Italy's Contemporary Art Capital"
-                  description="We travel inland to Gibellina, a town dramatically reimagined after the 1968 Belice earthquake through one of Europe's most ambitious art-reconstruction projects. Visit Alberto Burri's monumental Grande Cretto—a vast concrete shroud over the ruins of the old town—and explore the Fondazione Orestiadi and the Museo delle Trame Mediterranee. Late afternoon transfer to Agrigento for evening check-in and rest."
+                  description="We travel inland to Gibellina, a town dramatically reimagined after the 1968 Belice earthquake through one of Europe's most ambitious art-reconstruction projects. Visit Alberto Burri's monumental Grande Cretto and explore the Fondazione Orestiadi and the Museo delle Trame Mediterranee. Late afternoon transfer to Agrigento for evening check-in and rest."
                 />
                 <ItineraryItem
                   day={6}
@@ -225,6 +225,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 className="p-8 bg-white border border-stone-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] rounded-sm relative overflow-hidden"
               >
+                {/* Price Header */}
                 <div className="flex justify-between items-start mb-6">
                   <div>
                     <span className="text-stone-400 text-[10px] tracking-widest uppercase font-bold">Total Price</span>
@@ -237,6 +238,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                     Selling Fast
                   </div>
                 </div>
+                {/* Date Selection */}
                 <div className={`mb-6 relative transition-opacity ${isRequestFormOpen ? 'opacity-50 pointer-events-none' : ''}`}>
                   <span className="text-stone-500 text-xs font-medium mb-2 block">Select Departure</span>
                   <button
@@ -306,11 +308,12 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                     <span className="text-[10px] bg-stone-50 text-stone-500 px-2 py-1 rounded-sm border border-stone-100">4 spots left</span>
                   </div>
                 </div>
+                {/* Summary Lines */}
                 {!isRequestFormOpen && (
                   <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-3 mb-8 bg-stone-50 p-4 rounded-sm">
                     <div className="flex justify-between text-xs">
                       <span className="text-stone-500">Deposit required</span>
-                      <span className="font-medium text-stone-900">€1000</span>
+                      <span className="font-medium text-stone-900">€1,000</span>
                     </div>
                     <div className="flex justify-between text-xs">
                       <span className="text-stone-500">Balance due</span>
@@ -318,6 +321,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                     </div>
                   </motion.div>
                 )}
+                {/* CTA Buttons or Form */}
                 <AnimatePresence mode="wait">
                   {!isRequestFormOpen ? (
                     <motion.div
@@ -380,6 +384,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                     </motion.form>
                   )}
                 </AnimatePresence>
+                {/* Trust Signals */}
                 {!isRequestFormOpen && (
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-6 flex flex-col gap-3">
                     <div className="flex items-center gap-3 text-xs text-stone-500">
@@ -397,7 +402,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
                   </motion.div>
                 )}
               </motion.div>
-              {/* Flight Widget */}
+              {/* Find Your Flight Widget */}
               <div className="p-6 bg-white border border-stone-100 rounded-sm shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <Plane size={18} className="text-stone-400" />
@@ -416,7 +421,7 @@ const ExperiencePage: React.FC<ExperiencePageProps> = ({ onNavigate }) => {
       <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-stone-200 p-4 z-40 flex justify-between items-center shadow-[0_-5px_20px_rgba(0,0,0,0.05)] safe-area-pb">
         <div>
           <span className="text-[10px] text-stone-500 block uppercase tracking-wide">Total Price</span>
-          <span className="text-xl font-serif text-stone-900 font-bold">€4,000/span>
+          <span className="text-xl font-serif text-stone-900 font-bold">€4,000</span>
         </div>
         <button className="px-6 py-3 bg-stone-900 text-white text-xs tracking-[0.2em] uppercase font-bold rounded-sm">
           Book Now
@@ -491,11 +496,10 @@ const FaqItem = ({ question, answer }: { question: string, answer: string }) => 
         className="overflow-hidden"
       >
         <p className="pt-4 text-stone-600 font-light leading-relaxed max-w-2xl">
-                    {answer}
-                </p>
-            </motion.div>
-        </div>
-    )
-}
-
+          {answer}
+        </p>
+      </motion.div>
+    </div>
+  );
+};
 export default ExperiencePage;
