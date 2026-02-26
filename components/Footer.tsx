@@ -95,21 +95,28 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </div>
             </div>
         </div>
-        {/* 3. BOTTOM BRANDING & COPYRIGHT */}
-        <div className="relative z-10 w-full overflow-hidden flex flex-col items-center justify-end">
-            {/* Huge Text - Full width end to end */}
-            <motion.h1
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                className="leading-[0.85] font-bold text-white text-center tracking-tighter w-full select-none opacity-20 pointer-events-none mix-blend-overlay pb-2 md:pb-4 whitespace-nowrap"
-                style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: 'clamp(1rem, 15.5vw, 100vw)',
-                    display: 'block',
-                    width: '100%',
-                }}
+        {/* Huge Text - Full width end to end */}
+<motion.h1
+    initial={{ y: 50, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1, ease: "easeOut" }}
+    className="leading-[0.85] font-bold text-white text-center tracking-tighter select-none opacity-20 pointer-events-none mix-blend-overlay pb-2 md:pb-4 whitespace-nowrap block"
+    style={{
+        fontFamily: "'Playfair Display', serif",
+        fontSize: '15vw',
+        width: '100%',
+        transformOrigin: 'center',
+    }}
+    ref={(el) => {
+        if (el) {
+            const scale = window.innerWidth / el.scrollWidth;
+            el.style.transform = `scaleX(${scale})`;
+        }
+    }}
+>
+    ROOTS&ROUTES
+</motion.h1>
             >
                 ROOTS&ROUTES
             </motion.h1>
