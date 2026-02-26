@@ -86,7 +86,7 @@ const AboutUs: React.FC = () => {
         />
         <Polaroid
           variant="classic"
-          src="images/sicilian_flavour1.webp"
+          src="images/lemoni1.jpeg"
           alt="Taormina Streets"
           className="bottom-[15%] right-[5%] xl:right-[12%] w-44 xl:w-52 -rotate-3 grayscale-[10%] hover:grayscale-0 transition-all duration-700 shadow-xl"
           delay={0.5}
